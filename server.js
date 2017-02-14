@@ -13,7 +13,7 @@ const server = express()
 
 const wss = new SocketServer({ server });
 
-wsServer.on('request', function(request) {
+ws.on('request', function(request) {
     console.log((new Date()) + ' Connection from origin ' + request.origin + '.');
 
     var connection = request.accept(null, request.origin); 
